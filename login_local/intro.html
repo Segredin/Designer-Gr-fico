@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Introdução ao Design Gráfico</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .intro-container {
+      max-width: 700px;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      animation: floatUp 1s ease-out forwards;
+      opacity: 0;
+      text-align: left;
+    }
+
+    .intro-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .intro-subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .intro-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .intro-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-container">
+    <h1 class="intro-title">Introdução ao Design Gráfico</h1>
+    <p class="intro-subtitle">Aprenda os fundamentos da comunicação visual.</p>
+
+    <p class="intro-text">
+      Design gráfico é a arte de combinar imagens, cores, tipografias e formas
+      para comunicar mensagens de maneira clara e visualmente atraente. Ele está
+      em tudo: logotipos, posts de redes sociais, embalagens, sites e muito mais.
+    </p>
+
+    <p class="intro-text">
+      Nesta aplicação, você terá acesso a páginas que podem representar diferentes
+      áreas do design, como identidades visuais, interfaces digitais e materiais
+      impressos. Use o login para acessar essas seções e praticar conceitos.
+    </p>
+
+    <!-- ÚNICO BOTÃO DA INTRO: leva para o login -->
+    <a href="login.html" class="intro-btn">Iniciar</a>
+  </div>
+</body>
+</html>

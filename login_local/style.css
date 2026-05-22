@@ -187,3 +187,26 @@ body {
 #listaUsuarios li {
   color: #555;
 }
+
+/* Botão de voltar */
+
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  border: none;
+  font-size: 0.85rem;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.back-btn:hover {
+  background: #eef2ff;
+  transform: translateY(-1px);
+}

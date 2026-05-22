@@ -35,15 +35,15 @@ if (form && inputNome && inputSenha && mensagem) {
 
       const novoUsuario = { nome, senha };
       usuarios.push(novoUsuario);
-      localStorage.setItem("usuarios", JSON.stringify(usuarios)); // salva no navegador [web:52][web:76]
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
       mostrarMensagem("Usuário cadastrado com sucesso! Redirecionando...", "ok");
-      redirecionarHome();
+      redirecionarParaPagina(novoUsuario);
     } else {
       // Se já existe, checa a senha
       if (usuarioExistente.senha === senha) {
         mostrarMensagem("Login realizado com sucesso! Redirecionando...", "ok");
-        redirecionarHome();
+        redirecionarParaPagina(usuarioExistente);
       } else {
         mostrarMensagem("Senha incorreta para esse usuário.");
       }
@@ -59,10 +59,36 @@ function mostrarMensagem(texto, tipo) {
   mensagem.style.color = tipo === "ok" ? "green" : "#b00020";
 }
 
-function redirecionarHome() {
-  // Redireciona para outra página (home.html)
+// Decide para qual página mandar (5 páginas possíveis)
+function redirecionarParaPagina(usuario) {
+  // Descobre o índice do usuário no array (0,1,2...)
+  const index = usuarios.findIndex(u => u.nome === usuario.nome);
+
+  let destino = "home1.html"; // padrão
+
+  // Exemplo: por posição do usuário no array
+  switch (index) {
+    case 0:
+      destino = "home1.html";
+      break;
+    case 1:
+      destino = "home2.html";
+      break;
+    case 2:
+      destino = "home3.html";
+      break;
+    case 3:
+      destino = "home4.html";
+      break;
+    case 4:
+      destino = "home5.html";
+      break;
+    default:
+      destino = "home1.html";
+  }
+
   setTimeout(() => {
-    window.location.href = "home.html"; // redireciona após 1s [web:61][web:63][web:68]
+    window.location.href = destino;
   }, 1000);
 }
 
@@ -96,8 +122,7 @@ if (btnLimpar && listaUsuarios) {
       return;
     }
 
-    // Remove apenas a chave "usuarios" do localStorage
-    localStorage.removeItem("usuarios"); // ou localStorage.clear() para apagar tudo [web:72][web:74][web:76]
+    localStorage.removeItem("usuarios");
     usuarios = [];
     listaUsuarios.innerHTML = "";
     mostrarMensagem("Usuários apagados do localStorage.", "ok");
