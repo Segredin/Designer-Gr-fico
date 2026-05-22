@@ -14,6 +14,8 @@ body {
   overflow: hidden;
 }
 
+/* CARD DO LOGIN (e base para as homes) */
+
 .login-card {
   width: 360px;
   padding: 40px 30px;
@@ -49,6 +51,8 @@ body {
   font-size: 0.9rem;
   margin-bottom: 24px;
 }
+
+/* inputs do login */
 
 .input-group {
   margin-bottom: 16px;
@@ -89,6 +93,8 @@ body {
   font-size: 0.8rem;
   color: #667eea;
 }
+
+/* botões grandes */
 
 .btn {
   width: 100%;
@@ -135,7 +141,7 @@ body {
   color: #b00020;
 }
 
-/* Admin local */
+/* Admin local (lista/limpar usuários) */
 
 .admin-box {
   margin-top: 20px;
@@ -188,7 +194,7 @@ body {
   color: #555;
 }
 
-/* Botão de voltar */
+/* Botão de voltar usado em login e homes */
 
 .back-btn {
   position: fixed;
@@ -209,4 +215,29 @@ body {
 .back-btn:hover {
   background: #eef2ff;
   transform: translateY(-1px);
+}
+
+/* Card das homes: bem maior, com textos em coluna e espaço para imagens */
+
+.home-card {
+  width: 90%;
+  max-width: 1100px;
+  text-align: left;
+}
+
+/* responsivo simples */
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .login-card {
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  .home-card {
+    width: 95%;
+  }
 }
