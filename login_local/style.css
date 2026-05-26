@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden;          /* volta a não ter scroll na página toda */
 }
 
 /* CARD DO LOGIN (e base para as homes) */
@@ -24,13 +24,13 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   text-align: center;
-  animation: floatUp 1s ease-out forwards;
+  animation: floatUp 0.8s ease-out forwards;
   opacity: 0;
 }
 
 @keyframes floatUp {
   0% {
-    transform: translateY(50px) scale(0.95);
+    transform: translateY(30px) scale(0.97);
     opacity: 0;
   }
   100% {
@@ -217,13 +217,16 @@ body {
   transform: translateY(-1px);
 }
 
-/* Card das homes: bem maior, com textos em coluna e espaço para imagens */
+/* Card das homes: um pouco menor que antes */
 
 .home-card {
-  width: 90%;
-  max-width: 1100px;
+  width: 70%;         /* reduz largura */
+  max-width: 650px;   /* antes era 1100px */
   text-align: left;
+  max-height: 800px;  /* altura máxima do retângulo */
+  padding: 30px 24px; /* um pouco menos de padding pra ficar mais compacto */
 }
+
 
 /* responsivo simples */
 
@@ -238,6 +241,6 @@ body {
   }
 
   .home-card {
-    width: 95%;
+    width: 90%;
   }
 }
