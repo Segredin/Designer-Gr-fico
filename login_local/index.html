@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Profissional</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Voltar do login vai para a intro (primeira página) -->
+  <a href="intro.html" class="back-btn">Voltar</a>
+
+  <div class="login-card">
+    <h2>Bem‑vindo</h2>
+    <p>Entre com sua conta para continuar</p>
+
+    <form id="formLogin">
+      <div class="input-group">
+        <input type="text" name="nome" id="nome" placeholder=" " required />
+        <label for="nome">Nome</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" name="senha" id="senha" placeholder=" " required />
+        <label for="senha">Senha</label>
+      </div>
+
+      <button type="submit" class="btn">Entrar / Cadastrar</button>
+    </form>
+
+    <div class="links">
+      <a href="#">Esqueceu a senha?</a>
+    </div>
+
+    <div class="msg" id="mensagem"></div>
+
+    <div class="admin-box">
+      <h3>Admin local</h3>
+      <button type="button" class="btn-small" id="btnListar">Listar usuários</button>
+      <button type="button" class="btn-small btn-danger" id="btnLimpar">Limpar usuários</button>
+
+      <ul id="listaUsuarios"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
