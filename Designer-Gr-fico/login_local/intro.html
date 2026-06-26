@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Introdução ao Design Gráfico</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .intro-container {
+      max-width: 700px;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      animation: floatUp 1s ease-out forwards;
+      opacity: 0;
+      text-align: left;
+    }
+
+    .intro-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .intro-subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .intro-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .intro-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-container">
+    <h1 class="intro-title">Introdução ao nosso Projeto nossas Futuras Profissões</h1>
+
+
+    <p class="intro-text">
+      O mercado de trabalho atual é movido pela tecnologia, pela criatividade, pelo esporte
+      de alto rendimento e pela inteligência de dados. O projeto "Nossas Futuras Profissões"
+      nasce do desejo de explorar essas áreas, entender o que nos motiva a seguir cada
+      carreira e criar uma aplicação prática onde esses universos se encontram.
+    </p>
+
+    <p class="intro-text">
+      Nesta plataforma, você poderá navegar por seções exclusivas de cada profissão,
+      entender o impacto de cada uma no mundo e praticar conceitos reais através do seu
+      login de acesso.
+    </p>
+
+    <!-- botão que leva para o login -->
+    <a href="index.html" class="intro-btn">Iniciar</a>
+  </div>
+</body>
+</html>
